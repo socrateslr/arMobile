@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    tools:menu="@menu/menu_main">
+
+    <EditText
+        android:id="@+id/textQuarto2"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="242dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="242dp"
+        android:ems="10"
+        android:hint="Informar horario de saída"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textVisitante" />
+
+    <EditText
+        android:id="@+id/textQuarto"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:hint="Informar Quarto"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textQuarto2"
+        app:layout_constraintStart_toStartOf="@+id/registerQuarto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textVisitante"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:hint="Nome do Visitante"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/registerPaciente"
+        app:layout_constraintEnd_toEndOf="@+id/textPaciente"
+        app:layout_constraintStart_toStartOf="@+id/registerVisitante"
+        app:layout_constraintTop_toTopOf="@+id/registerVisitante" />
+
+    <TextView
+        android:id="@+id/registerVisitante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="122dp"
+        android:text="Nome"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnRegCorrigir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="52dp"
+        android:text="Corrigir"
+        app:layout_constraintStart_toEndOf="@+id/btnRegIncluir"
+        app:layout_constraintTop_toBottomOf="@+id/textQuarto2" />
+
+    <Button
+        android:id="@+id/btnRegIncluir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Incluir"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnRegCorrigir"
+        app:layout_constraintStart_toStartOf="@+id/textQuarto2" />
+
+    <TextView
+        android:id="@+id/registerSaida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saída"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textQuarto2"
+        app:layout_constraintStart_toStartOf="@+id/textQuarto2" />
+
+    <TextView
+        android:id="@+id/registerQuarto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:text="Quarto"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textQuarto"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/textPaciente"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginBottom="47dp"
+        android:ems="10"
+        android:hint="Nome do Paciente"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/registerQuarto"
+        app:layout_constraintEnd_toEndOf="@+id/textQuarto"
+        app:layout_constraintStart_toStartOf="@+id/registerPaciente"
+        app:layout_constraintTop_toBottomOf="@+id/textVisitante" />
+
+    <TextView
+        android:id="@+id/registerPaciente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="68dp"
+        android:text="Paciente"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerVisitante" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarRegister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/menu_main"
+        app:navigationIcon="@drawable/ic_backspace" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
